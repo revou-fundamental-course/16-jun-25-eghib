@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kalkulator Segitiga</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to Katik</h1>
+      <p>Sebuah web apps sederhana untuk menghitung luas dan keliling bangun datar</p>
+      <nav class="button-stack">
+        <button class="btn-primary" onclick="showSection('luas')">Segitiga</button>
+        <button class="btn-outline" onclick="showSection('jajar')">Jajar Genjang</button>
+      </nav>
+    </header>
+
+    <!-- Luas Segitiga -->
+    <section id="luas-section" class="card">
+      <h2>Luas Segitiga</h2>
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.advernesia.com%2Fblog%2Fmatematika%2Frumus-segitiga-sama-sisi-dan-pythagoras-segitiga-sama-sisi%2F&psig=AOvVaw1cvmOfxFRvEeE6kMmE4iTK&ust=1751037524028000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCBnqixj44DFQAAAAAdAAAAABAE" alt="Segitiga" class="triangle-img" />
+      <p>Rumus Luas Segitiga yaitu: <strong>L = 1/2 × a × t</strong></p>
+      <p>
+        Di mana: <br />
+        L = Luas<br />
+        a = Panjang Alas<br />
+        t = Tinggi
+      </p>
+      <div class="form-group">
+        <label>Nilai Alas:</label>
+        <input type="number" id="alas" placeholder="Nilai Alas" />
+        <label>Nilai Tinggi:</label>
+        <input type="number" id="tinggi" placeholder="Nilai Tinggi" />
+        <div id="hasil-luas" class="result"></div>
+        <button onclick="hitungLuas()">Hitung</button>
+        <button onclick="resetLuas()" class="reset">Reset</button>
+      </div>
+    </section>
+
+    <!-- Keliling Segitiga -->
+    <section id="keliling-section" class="card hidden">
+      <h2>Keliling Segitiga</h2>
+      <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.advernesia.com%2Fblog%2Fmatematika%2Frumus-segitiga-sama-sisi-dan-pythagoras-segitiga-sama-sisi%2F&psig=AOvVaw1cvmOfxFRvEeE6kMmE4iTK&ust=1751037524028000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCBnqixj44DFQAAAAAdAAAAABAE" alt="Segitiga" class="triangle-img" />
+      <p>Rumus Keliling Segitiga yaitu: <strong>K = S1 + S2 + S3</strong></p>
+      <p>
+        Di mana: <br />
+        K = Keliling<br />
+        S1, S2, S3 = Sisi-sisi segitiga
+      </p>
+      <div class="form-group">
+        <label>Sisi 1:</label>
+        <input type="number" id="s1" placeholder="Sisi A" />
+        <label>Sisi 2:</label>
+        <input type="number" id="s2" placeholder="Sisi B" />
+        <label>Sisi 3:</label>
+        <input type="number" id="s3" placeholder="Sisi C" />
+        <div id="hasil-keliling" class="result"></div>
+        <button onclick="hitungKeliling()">Hitung</button>
+        <button onclick="resetKeliling()" class="reset">Reset</button>
+      </div>
+    </section>
+
+    <!-- Jajar Genjang -->
+    <section id="jajar-section" class="card hidden">
+      <h2>Jajar Genjang</h2>
+      <p>Coming soon...</p>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
